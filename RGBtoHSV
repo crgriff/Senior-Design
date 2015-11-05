@@ -1,0 +1,19 @@
+public class RGBtoHSV {
+	
+	
+	@SuppressWarnings("null")
+	public static float[] RGBtoHSV(int R, int G, int B){
+	
+		float[] hsv = new float[3];
+		hsv = Color.RGBtoHSB(R,G,B,hsv);
+
+		for(int i =0; i<3; i++){
+			if(i ==0) {System.out.print("hue = ");}
+			if(i==1) {System.out.print("saturation = ");}
+			if(i==2) {System.out.print("Brightness = ");}
+			System.out.print(hsv[i] + ", ");
+			
+		}
+		return hsv;
+}
+}
